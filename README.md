@@ -16,5 +16,5 @@ Triggers:
 - Set an additional action if is passes the condition check above to set the viewport back to the default multi-view
 
 
-![alt text](https://github.com/jtroberts83/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/jtroberts83/home-assistant-automations/blob/main/ViewportAutomation.jpg?raw=true)
 
