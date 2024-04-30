@@ -6,7 +6,7 @@ Prereqs:
 - Unifi Protect Cameras
 - In the Unifi Protect app, create, name and share single camera views for each camera as well as a default multi-view you want the viewport to default to. (To name and share with your local unifi users including your Home Assistant user, you must click on Settings)
 
-To configure dynamic camera switching in Home Assistant you will create a new blank automation and set it up as follows:
+To configure dynamic camera switching in Home Assistant you will create a new blank automation and set it up as follows: (Screenshot below and YAML config attached)
 Triggers:
 - Select your camera device from the device list and then choose the camera triggere for people or vehicles detected (or setup a trigger for both)
 - (Optional) configure what days and times you want it to dynamically switch
