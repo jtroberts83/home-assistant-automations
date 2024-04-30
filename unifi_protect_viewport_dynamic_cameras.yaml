@@ -1,0 +1,47 @@
+alias: Street View Left - Vehicle or Person Detected - Change Viewport Camera Screen
+description: >-
+  Changes the viewport camera screen to show the AI Pro when vehicle or person
+  is detected Switches back after 20 seconds
+trigger:
+  - type: turned_on
+    platform: device
+    device_id: cd4d46309603c563064b20f347dae265
+    entity_id: 9c7c5c87aaa26d9eb58d36aa5adef10f
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: cd4d46309603c563064b20f347dae265
+    entity_id: 60d828c93245a995f58fd691a36c0bd9
+    domain: binary_sensor
+condition:
+  - condition: time
+    after: "07:00:00"
+    before: "22:00:00"
+    weekday:
+      - sun
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+action:
+  - device_id: f493f8d1d7c2b3140e8c593e8219af4e
+    domain: select
+    entity_id: 810449eb367af09ee0405562bc1ba7dc
+    type: select_option
+    option: AI_Pro
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 20
+      milliseconds: 0
+  - condition: state
+    entity_id: select.up_viewport_liveview
+    state: AI_Pro
+  - device_id: f493f8d1d7c2b3140e8c593e8219af4e
+    domain: select
+    entity_id: 810449eb367af09ee0405562bc1ba7dc
+    type: select_option
+    option: New Live View
+mode: single
